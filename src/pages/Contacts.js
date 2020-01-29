@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addContact, deleteContact, searchContact } from "../redux/actions";
 import shortid from "shortid";
+import { Link } from "react-router-dom";
 
 class Contacts extends Component {
   state = {
@@ -42,6 +43,7 @@ class Contacts extends Component {
 
     return (
       <div>
+        <Link to="/">Back to home page</Link>
         <h2>Contacts</h2>
         <form onSubmit={this.addNewContact}>
           <input
